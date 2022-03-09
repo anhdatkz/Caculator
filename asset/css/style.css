@@ -10,7 +10,7 @@ html{
 }
 
 body{
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url("/asset/images/sunset.jpg") no-repeat center/cover;
+    /* background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url("/asset/images/sunset.jpg") no-repeat center/cover; */
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -50,10 +50,16 @@ body{
 .caculator__card-box .result{
     font-size: 12px;
     color: #969b85;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
 }
 
 .caculator__card-box .input{
     font-size: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip; 
 }
 
 #main .caculator__card-box input{
@@ -100,14 +106,30 @@ body{
     background-color: #424548;
 }
 
-.caculator__card-item.result{
+.caculator__card-item.delete{
+    background-color: rgb(224, 49, 49);
+}
+
+.caculator__card-item.delete:hover{
+    background-color: rgb(240, 72, 72);
+}
+
+.caculator__card-item.clear{
+    background-color: #fc7737;
+}
+
+.caculator__card-item.clear:hover{
+    background-color: #f7814b;
+}
+
+.caculator__card-item.equal{
     background-color: #8ab4f8;
     font-size: x-large;
     font-weight: bolder;
     color: #202124;
 }
 
-.caculator__card-item.result:hover{
+.caculator__card-item.equal:hover{
     background-color: #aecbfa;
 }
 
